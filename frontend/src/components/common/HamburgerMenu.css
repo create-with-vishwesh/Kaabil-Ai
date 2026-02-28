@@ -1,0 +1,166 @@
+.hamburger-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.site-title {
+  color: #1a2b5c;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #1a2b5c 0%, #0d1a3a 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+.menu-content {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 280px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  transform: translateX(-20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu.active .menu-content {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.hamburger-menu .user-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hamburger-menu .profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  color: #1a2b5c;
+  font-size: 1.5rem;
+}
+
+.hamburger-menu .profile-info h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.hamburger-menu .profile-info p {
+  margin: 5px 0 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.progress-steps {
+  margin-bottom: 20px;
+}
+
+.progress-steps h4 {
+  margin: 0 0 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.step {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.step-number {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.step-number.active {
+  background: #1a2b5c;
+  color: white;
+}
+
+.step-info {
+  flex: 1;
+}
+
+.step-info p {
+  margin: 0 0 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.hamburger-menu .progress-bar {
+  height: 6px;
+  background: #f0f4f8;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.hamburger-menu .progress {
+  height: 100%;
+  background: linear-gradient(90deg, #1a2b5c 0%, #3a4b8a 100%);
+  transition: width 0.3s ease;
+}
+
+.menu-links {
+  border-top: 1px solid #f0f4f8;
+  padding-top: 15px;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.menu-links a:hover {
+  color: #1a2b5c;
+}
+
+.menu-links a i {
+  margin-right: 10px;
+  color: #1a2b5c;
+}

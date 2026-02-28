@@ -1,0 +1,129 @@
+.interests-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a8d8ff 0%, #ffffff 100%);
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interests-container {
+  width: 90%;
+  max-width: 800px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 2rem;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.interests-header {
+  text-align: center;
+}
+
+.interests-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: #2c5282;
+}
+
+.interests-header p {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  color: #4a5568;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.interest-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(200, 216, 240, 0.6);
+  border-radius: 16px;
+  padding: 1.5rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.interest-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(49, 130, 206, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.interest-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(49, 130, 206, 0.2);
+  border-color: rgba(49, 130, 206, 0.3);
+}
+
+.interest-card:hover::before {
+  opacity: 1;
+}
+
+.interest-card.selected {
+  background: #3182ce;
+  color: white;
+  border-color: #3182ce;
+  box-shadow: 0 10px 25px rgba(49, 130, 206, 0.4);
+}
+
+.interest-card i {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.interests-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.interests-btn {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 15px rgba(49, 130, 206, 0.3);
+}
+
+.interests-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(49, 130, 206, 0.4);
+}
+
+.interests-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}

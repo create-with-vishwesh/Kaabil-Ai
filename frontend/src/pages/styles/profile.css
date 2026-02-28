@@ -1,0 +1,179 @@
+.profile-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a8d8ff 0%, #ffffff 100%);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem 2rem 2rem;
+}
+
+.profile-hero {
+  text-align: center;
+  padding: 1rem 2rem 0.5rem;
+  max-width: 800px;
+  margin: 0 auto -2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 2rem;
+  color: #2c5282;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-heading h1 {
+  font-size: 1.8rem;
+  color: #2c5282;
+  margin-bottom: 0.5rem;
+}
+
+.profile-progress {
+  margin-top: 0.5rem;
+}
+
+.profile-progress span {
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.profile-page .progress-bar {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.profile-page .progress {
+  height: 100%;
+  background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(200, 216, 240, 0.6);
+}
+
+.form-section h2 {
+  color: #2c5282;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.form-section h2 i {
+  color: #3182ce;
+}
+
+.profile-page .input-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.profile-page .input-group input,
+.profile-page .input-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.profile-page .input-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.profile-page .input-group input:focus,
+.profile-page .input-group textarea:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+  outline: none;
+}
+
+.profile-page .input-group label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: #718096;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.profile-page .input-group input:focus + label,
+.profile-page .input-group input:not(:placeholder-shown) + label,
+.profile-page .input-group textarea:focus + label,
+.profile-page .input-group textarea:not(:placeholder-shown) + label {
+  top: -0.5rem;
+  left: 0.8rem;
+  font-size: 0.8rem;
+  background: white;
+  padding: 0 0.5rem;
+  color: #3182ce;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.profile-btn {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+}
+
+.profile-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(49, 130, 206, 0.4);
+}

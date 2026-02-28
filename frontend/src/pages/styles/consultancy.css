@@ -1,0 +1,325 @@
+.consultancy-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+}
+
+.consultancy-page nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(135deg, rgb(11, 78, 78) 0%, rgb(20, 110, 110) 100%);
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.consultancy-page .main-content {
+  padding: 50px;
+}
+
+.consultation-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.consultation-header h1 {
+  color: rgb(11, 78, 78);
+  margin-bottom: 20px;
+}
+
+.consultation-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+.service-card:nth-child(6) { animation-delay: 0.6s; }
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+  color: rgb(11, 78, 78);
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.booking-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.book-button {
+  background: rgb(11, 78, 78);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.book-button:hover {
+  background: rgb(20, 110, 110);
+}
+
+.doctor-profiles h2 {
+  text-align: center;
+  color: rgb(11, 78, 78);
+  margin: 50px 0 30px;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.doctor-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-img-placeholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #e0f2f2, #b2dfdb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: rgb(11, 78, 78);
+}
+
+.doctor-info {
+  padding: 20px;
+}
+
+.doctor-card h3 {
+  color: rgb(11, 78, 78);
+  margin-bottom: 10px;
+}
+
+.doctor-role {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.doctor-desc {
+  color: #666;
+  line-height: 1.6;
+}
+
+.chat-start-btn {
+  display: inline-block;
+  background: rgb(11, 78, 78);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.chat-start-btn:hover {
+  background: rgb(20, 110, 110);
+}
+
+/* Chat Assistant */
+.chat-assistant {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.chat-fab {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgb(11, 78, 78);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.chat-fab:hover {
+  transform: scale(1.1);
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 450px;
+  height: 600px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-window.active {
+  display: flex;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.chat-header-bar {
+  background: rgb(11, 78, 78);
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-header-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-header-info h3 {
+  margin: 0;
+  color: white;
+}
+
+.chat-header-info small {
+  color: #e0f2f2;
+}
+
+.chat-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.chat-messages-area {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.chat-msg {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin-bottom: 10px;
+}
+
+.bot-msg {
+  background: #e1f5f5;
+}
+
+.user-msg {
+  background: #f0f0f0;
+  margin-left: auto;
+}
+
+.chat-input-area {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input-area input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.chat-input-area button {
+  background: rgb(11, 78, 78);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 768px) {
+  .consultation-services,
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consultancy-page .main-content {
+    padding: 30px;
+  }
+}

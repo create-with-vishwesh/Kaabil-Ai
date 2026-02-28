@@ -1,0 +1,238 @@
+.dashboard-page {
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-container {
+  background: linear-gradient(135deg, #0d1a3a 0%, #1a2b5c 100%);
+  min-height: 100vh;
+  color: #f3f4f6;
+  padding: 2rem;
+}
+
+.dashboard-header {
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #f3f4f6;
+}
+
+.dashboard-header h1 i {
+  margin-right: 0.5rem;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 0.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+}
+
+.stat-card h3 {
+  color: #f3f4f6;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.stat-card .progress-bar {
+  height: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stat-card .progress {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.dashboard-content {
+  padding: 2rem;
+}
+
+.chart-container {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.achievements-section {
+  margin-bottom: 2rem;
+}
+
+.achievements-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #f3f4f6;
+}
+
+.achievements-section h2 i {
+  margin-right: 0.5rem;
+  color: #fbbf24;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.achievement-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(107, 114, 128, 0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card.completed {
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255,255,255,0.1) 0%,
+    rgba(255,255,255,0) 50%,
+    rgba(255,255,255,0.1) 100%
+  );
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+.achievement-card:hover::before {
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% { transform: rotate(30deg) translate(-30%, -30%); }
+  100% { transform: rotate(30deg) translate(30%, 30%); }
+}
+
+.achievement-card i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.achievement-card.completed i {
+  color: #4ade80;
+}
+
+.achievement-card:not(.completed) i {
+  color: #9ca3af;
+}
+
+.achievement-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #f3f4f6;
+}
+
+.achievement-card p {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.recommendations-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #f3f4f6;
+}
+
+.recommendations-section h2 i {
+  margin-right: 0.5rem;
+  color: #fbbf24;
+}
+
+.recommendation-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.recommendation-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #f3f4f6;
+}
+
+.recommendation-card p {
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+
+.recommendation-card .cta-btn {
+  display: inline-block;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.recommendation-card .cta-btn.primary {
+  background: linear-gradient(135deg, #1a2b5c 0%, #3a4b8a 100%);
+}
+
+.recommendation-card .cta-btn.accent {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+.recommendation-card .cta-btn:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
